@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="styles/style.css">
+    <title>Nelus Som Automotivo</title>
+</head>
+<body>
+    <header>
+        <div id="logomenu">
+            <img id="logo_menu" src="images/logo_menu.png" alt="logoNelusSom">
+            <span id="close" class="material-symbols-outlined" onclick="clickMenu()">close</span>
+            <span id="burger" class="material-symbols-outlined" onclick="clickMenu()">menu</span>
+        </div>
+        <menu id="menu">
+            <ul>
+                <li><a href="#inicio">INICIO</a></li>
+                <li><a href="#quemSomos">QUEM SOMOS</a></li>
+                <li><a href="#missao">NOSSA MISSAO</a></li>
+                <li><a href="#projetos">NOSSOS PROJETOS</a></li>
+                <li><a href="">ONDE NOS ENCONTRAR</a></li>
+                <li><a href="">PARCEIROS</a></li>
+            </ul>
+        </menu>
+    </header>
+    <section id="inicio" class="hidden">
+        <img id="imgLoja1" src="images/loja1.jpg" alt="Imagem loja 1">
+        <p>"Voce escolhe a música, nós fazemos tocar."</p>
+        <img id="imgLoja2" src="images/loja2.jpg" alt="Imagem loja 2">
+    </section>
+    <section id="quemSomos" class="hidden">
+        <h3>Quem Somos?</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vel nisi velit. Donec a velit id libero porttitor malesuada. Duis tincidunt, lacus ut facilisis elementum, metus nunc volutpat augue, sit amet vehicula libero lectus non odio. Fusce sodales metus nec lorem varius, vitae ultricies eros sollicitudin. Nulla facilisi. Suspendisse potenti. Ut a ante sed velit consectetur consequat sit amet sit amet felis. Vivamus vel turpis orci. Ut volutpat tincidunt nibh, non sagittis purus tincidunt sed.
+        Mauris et arcu eget justo posuere vehicula. Integer posuere velit eu est varius, vitae sodales ligula convallis. In a lacus et libero interdum tincidunt non vel enim. Nammollis quam sed orci gravida, non iaculis augue fermentum. Pellentesque eget vulputate ipsum, non faucibus est. Nullam in libero scelerisque, gravida felis at, dapibussem. Proin quis lectus suscipit, accumsan nulla a, cursus libero. Nam sit amet metus nisi. Fusce a suscipit libero. Nulla facilisi. Proin ut lectus et enim ullamcorpervolutpat.
+            </p>
+    </section>
+    <section id="missao" class="hidden">
+        <h3>Qual a nossa missão?</h3>
+        <p>"Lorem ipsum dolor sit amet"</p>
+    </section>
+    <section id="projetos" class="hidden">
+        <h3>Dê uma olhada em nossos projetos!</h3>
+        <iframe width="auto" height="auto" src="https://www.youtube.com/embed/FsGfwDKlURw?si=PCqBJChIo84iIYnA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe width="auto" height="auto" src="https://www.youtube.com/embed/8HWgdodI_AU?si=pZaPQZn8KoS-x4Ev" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </section>
+
+    <script>
+        // Função para alternar o menu
+        function clickMenu() {
+            var menu = document.getElementById('menu');
+            var burgerIcon = document.getElementById('burger');
+            var closeIcon = document.getElementById('close');
+    
+            menu.classList.toggle('open');
+    
+            if (menu.classList.contains('open')) {
+                burgerIcon.style.display = 'none';
+                closeIcon.style.display = 'block';
+            } else {
+                burgerIcon.style.display = 'block';
+                closeIcon.style.display = 'none';
+            }
+        }
+
+        // Observer para animar as sections
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target); // Para não ficar observando se já está visível
+                }
+            });
+        }, { threshold: 0.1 });
+
+        // Observa cada section
+        document.querySelectorAll('section').forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>

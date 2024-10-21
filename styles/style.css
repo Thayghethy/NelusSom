@@ -1,0 +1,293 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'Nelus';
+    src: url('fonts/Speeday-Bold-FFP.ttf') format('truetype'),
+         url('fonts/Speeday-Regular-FFP.ttf') format('truetype');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.hidden {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+body {
+    background-color:#c9a26b;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background-color: rgb(0, 0, 0);
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+header > div#logomenu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(0, 0, 0);
+    width: 100%;
+}
+
+header > div#logomenu > img {
+    background-color: rgb(0, 0, 0);
+    width: 200px;
+    height: auto;
+    margin: 0 auto;
+}
+
+span#close {
+    display: none;
+    color: #c9a26b;
+    font-size: 3em;
+    background-color: rgb(0, 0, 0);
+    cursor: pointer;
+    padding: 0px;
+    position: absolute;
+    right: 50px;
+    top: 20px;
+}
+
+span#burger {
+    color: #c9a26b;
+    font-size: 3em;
+    background-color: rgb(0, 0, 0);
+    cursor: pointer;
+    padding: 0px;
+    transition: background-color 0.3s, color 0.3s;
+    position: absolute;
+    right: 50px;
+    top: 20px;
+}
+
+span#burger:hover, span#close:hover {
+    background-color: #c9a26b;
+    text-shadow: 1px 1px rgba(255, 255, 255, 0.267);
+    color: black;
+}
+
+header > menu.open ~ div#logomenu span#close {
+    display: block;
+    color: #fce410;
+}
+
+header > menu.open ~ div#logomenu span#burger {
+    display: none;
+    color: #fce410;
+}
+
+header > menu {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out;
+    background-color: rgb(0, 0, 0);
+    position: fixed;
+    top: 90px;
+    right: 0;
+    width: 250px;
+    z-index: 1000;
+    text-align: center;
+}
+
+header > menu.open {
+    max-height: 500px;
+}
+
+header > menu > ul {
+    display: block;
+    width: 100%;
+    background-color: #c9a26b;
+    font-size: 1em;
+    list-style: none;
+    padding: 0px;
+    text-align: left;
+    margin: 0px;
+}
+
+header > menu > ul > li {
+    font-family: 'Nelus', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    display: block;
+    background-color: #c9a26b;
+    padding: 15px 0;
+    text-align: left;
+}
+
+header > menu > ul > li > a {
+    letter-spacing: 1px;
+    font-size: 1em;
+    padding: 12px;
+    text-decoration: none;
+    display: block;
+    color: black;
+    background-color: #c9a26b;
+    width: 100%;
+    transition: color 0.3s, text-shadow 0.3s;
+}
+
+header > menu > ul > li > a:hover {
+    color: #ffffff;
+    text-shadow: 1px 1px 1px #ffffff50;
+    cursor: pointer;
+    padding: 10px;
+}
+
+/* SEÇÃO INÍCIO */
+#inicio, #quemSomos, #missao, #projetos {
+    margin-left: 2vw;
+    margin-right: 2vw;
+    width: 96vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #000000;
+    padding: 20px;
+    gap: 20px; 
+    /*border-radius: 5px;*/
+}
+
+#inicio img {
+    width: 100%;
+    max-width: 400px; 
+    height: auto;
+    box-shadow: 2px 2px rgba(0, 0, 0, 0.315);
+    border-radius: 10px;
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+#inicio p {
+    color: #c9a26b;
+    text-shadow: 2px 2px rgba(255, 255, 255, 0.404);
+    font-family: 'Nelus';
+    font-size: 1em;
+    letter-spacing: 1px;
+    text-align: center;
+    margin: 0;
+    padding: 10px;
+}
+
+#inicio.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#inicio img {
+    box-shadow: 2px 2px rgba(0, 0, 0, 0.315);
+    border-radius: 10px;
+    opacity: 0;
+    transform: scale(0.9);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+#inicio.visible img {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/*SEÇÃO QUEM SOMOS*/
+
+#quemSomos h3 {
+    font-size: 1.5em;
+    color: #c9a26b;
+    transform: scale(0.9);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+#quemSomos p {
+    font-size: 1.2em;
+    color: #c9a26b;
+    transform: scale(0.9);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+#quemSomos.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/*SEÇÃO MISSÃO*/
+#missao h3 {
+    font-size: 1.5em;
+    color: #c9a26b;
+    transform: scale(0.9);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+#missao p {
+    font-size: 2em;
+    color: #c9a26b;
+    transform: scale(0.9);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+#missao.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+/*SEÇÃO PROJETOS*/
+#projetos h3 {
+    font-size: 1.5em;
+    color: #c9a26b;
+    transform: scale(0.9);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+
+
+/* Responsividade */
+@media(min-width: 768px) {
+    #inicio {
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    #inicio img {
+        width: 45%; 
+    }
+
+    #inicio p {
+        width: 50%; 
+    }
+}
+
+/*RODAPÉ*/
+footer {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fce410;
+    text-align: center;
+    padding: 10px 0;
+    z-index: 9999;
+}
+
+footer > a, p {
+    color: black;
+    font-size: 0.7em;
+    text-decoration: none;
+}
