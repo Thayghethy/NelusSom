@@ -20,15 +20,25 @@
                 <li><a href="#quemSomos">QUEM SOMOS</a></li>
                 <li><a href="#missao">NOSSA MISSAO</a></li>
                 <li><a href="#projetos">NOSSOS PROJETOS</a></li>
-                <li><a href="">ONDE NOS ENCONTRAR</a></li>
-                <li><a href="">PARCEIROS</a></li>
+                <li><a href="#encontrar">ONDE NOS ENCONTRAR</a></li>
+                <li><a href="#parceiros">PARCEIROS</a></li>
             </ul>
         </menu>
     </header>
     <section id="inicio" class="hidden">
-        <img id="imgLoja1" src="images/loja1.jpg" alt="Imagem loja 1">
+        <div class="carousel">
+            <span class="material-symbols-outlined arrow prev" onclick="moveSlide(-1)">arrow_back_ios</span>    
+            <div class="carousel-inner">
+                <img src="images/loja1.jpg" alt="loja1" class="slide active">
+                <img src="images/loja2.jpg" alt="loja2" class="slide">
+                <img src="images/LOJA3.jpg" alt="LOJA3" class="slide">
+                <img src="images/loja4.jpg" alt="loja4" class="slide">
+                <img src="images/loja5.jpg" alt="loja5" class="slide">
+                <img src="images/loja6.jpg" alt="loja6" class="slide">
+            </div>
+            <span class="material-symbols-outlined arrow next" onclick="moveSlide(1)">arrow_forward_ios</span>
+        </div>
         <p>"Voce escolhe a música, nós fazemos tocar."</p>
-        <img id="imgLoja2" src="images/loja2.jpg" alt="Imagem loja 2">
     </section>
     <section id="quemSomos" class="hidden">
         <h3>Quem Somos?</h3>
@@ -44,8 +54,52 @@
         <h3>Dê uma olhada em nossos projetos!</h3>
         <iframe width="auto" height="auto" src="https://www.youtube.com/embed/FsGfwDKlURw?si=PCqBJChIo84iIYnA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         <iframe width="auto" height="auto" src="https://www.youtube.com/embed/8HWgdodI_AU?si=pZaPQZn8KoS-x4Ev" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe width="auto" height="auto" src="https://www.youtube.com/embed/bTWu-LijOsY?si=s_wcXLIM3R7CPNTf" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe width="auto" height="auto" src="https://www.youtube.com/embed/1BUMrzJttHs?si=1WsAIG4jN1fhTcr6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe width="auto" height="auto" src="https://www.youtube.com/embed/FX4qDPs3VDs?si=8s5invUE-jWwZffA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </section>
-
+    <section id="encontrar" class="hidden">
+        <h3>Onde nos encontrar?</h3>
+        <p>Estamos na Rua Ludovico Kachel, 496, Campo Pequeno, Colombo - PR</p>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3605.4871538906164!2d-49.20488882357526!3d-25.354984729929743!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94dce9d3d709b097%3A0xd00f941450ac12d3!2sNelu&#39;s%20Som%20Automotivo!5e0!3m2!1spt-BR!2sbr!4v1729560106479!5m2!1spt-BR!2sbr" width="auto" height="auto" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <p>Ou em nossas redes sociais!</p>
+        <div id="social">
+            <a href="https://instagram.com/nelussomautomotivo/" target="_blank"><img src="images/logo-instagram.jpg" alt="LogoInstagram"></a>
+            <a href="https://www.facebook.com/nelussomautomotivo?mibextid=ZbWKwL" target="_blank"><img src="images/logo-facebook.jpg" alt="LogoFacebook"></a>
+            <a href="https://wa.me/5541992285718?text=" target="_blank"><img src="images/whats_icon.png" alt="LogoWhats"></a>
+            <a href="https://www.youtube.com/@NelusSomAutomotivo" target="_blank"><img src="images/logo-youtube.jpg" alt="LogoYoutube"></a>
+        </div>
+        <h3>Conheça um pouco de nossa loja:</h3>
+        <iframe width="auto" height="auto" src="https://www.youtube.com/embed/P0baeuRKdcc?si=tQLYDRCX-wJXopuQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </section>
+    <section id="parceiros" class="hidden">
+        <h3>Tabalhamos com as melhores marcas do mercado!</h3>
+        <div id="marcasPrincipais">
+            <img src="images/parceiros/logo_taramps.png" alt="Taramps Logo">
+            <img src="images/parceiros/master_logo.png" alt="masterLogo">
+            <img src="images/parceiros/pionner.png" alt="Pionner logo">
+            <img src="images/parceiros/technoise.png" alt="Technoise Logo">
+            <img src="images/parceiros/hinor_logo.png" alt="Hinor logo">
+            <img src="images/parceiros/hardpower_logo.png" alt="Hardpower logo">
+            <img src="images/parceiros/eros_logo.png" alt="Eros Logo">
+        </div>
+        <div id="marcasSecundarias">
+            <img src="images/parceiros/hbuster_2.png" alt="HBuster logo">
+            <img src="images/parceiros/fiamon_2.png" alt="Fiamon logo">
+            <img src="images/parceiros/hurricane_2.png" alt="hurricane logo">
+            <img src="images/parceiros/jbl_2.png" alt="JBL logo">
+            <img src="images/parceiros/jfa_2.png" alt="JFA logo">
+            <img src="images/parceiros/soundigital_2.png" alt="Soundigital logo">
+        </div>
+        <div id="marcasTerciarias">
+            <img id="logoRex" src="images/parceiros/rex_3.png" alt="Rex logo">
+            <img src="images/parceiros/stetsom_3.png" alt="Stetsom Logo">
+            <img src="images/parceiros/triton_3.png" alt="Trioton Logo">
+        </div>
+    </section>
+    <footer>
+        <a href="https://www.facebook.com/thayghethy.souzadossantos.5" target="_blank">Thayghethy Souza</a><p> - 2024 - Todos os direitos reservados</p>
+      </footer>
     <script>
         // Função para alternar o menu
         function clickMenu() {
@@ -69,7 +123,7 @@
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('visible');
-                    observer.unobserve(entry.target); // Para não ficar observando se já está visível
+                    observer.unobserve(entry.target);
                 }
             });
         }, { threshold: 0.1 });
@@ -78,6 +132,31 @@
         document.querySelectorAll('section').forEach(section => {
             observer.observe(section);
         });
+
+
+
+        //carrossel
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        const totalSlides = slides.length;
+
+        function moveSlide(direction) {
+            
+            slides[currentSlide].classList.remove('active');
+
+            
+            currentSlide = (currentSlide + direction + totalSlides) % totalSlides;
+
+            
+            slides[currentSlide].classList.add('active');
+        }
+
+        function autoSlide() {
+            moveSlide(1);
+        }
+
+        
+        setInterval(autoSlide, 2500);
     </script>
 </body>
 </html>

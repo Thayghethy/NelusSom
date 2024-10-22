@@ -156,7 +156,7 @@ header > menu > ul > li > a:hover {
 }
 
 /* SEÇÃO INÍCIO */
-#inicio, #quemSomos, #missao, #projetos {
+#inicio, #quemSomos, #missao, #projetos, #encontrar, #parceiros {
     margin-left: 2vw;
     margin-right: 2vw;
     width: 96vw;
@@ -165,10 +165,72 @@ header > menu > ul > li > a:hover {
     justify-content: center;
     align-items: center;
     background-color: #000000;
-    padding: 20px;
+    padding: 20px 0;
     gap: 20px; 
     /*border-radius: 5px;*/
 }
+
+/*CARROSSEL*/
+.carousel {
+    position: relative;
+    width: 80%;
+    max-width: 800px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 0;
+    margin-top: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+}
+
+.slide {
+    min-width: 100%;
+    display: none;
+}
+
+.slide.active {
+    display: block;
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+}
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}
+
+.arrow:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+/*FIM CARROSSEL*/
 
 #inicio img {
     width: 100%;
@@ -186,8 +248,9 @@ header > menu > ul > li > a:hover {
     font-size: 1em;
     letter-spacing: 1px;
     text-align: center;
-    margin: 0;
+    margin-top: 10px;
     padding: 10px;
+    line-height: 1.5;
 }
 
 #inicio.visible {
@@ -255,8 +318,94 @@ header > menu > ul > li > a:hover {
     transform: scale(0.9);
     transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
+/*SEÇÃO ENCONTRAR*/
+#encontrar h3 {
+    font-size: 1.5em;
+    color: #c9a26b;
+    transform: scale(0.9);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
 
+#encontrar p {
+    color: #c9a26b;
+    font-size: 1.3em;
+}
 
+/*REDES SOCIAIS*/
+#social {
+    text-align: right;
+}
+
+#social > a > img {
+    width: 50px;
+    margin: 10px;
+    border-radius: 50%;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.400);
+    box-sizing: border-box;
+}
+
+#social img:hover {
+    border: 2px solid rgba(255, 255, 255, 0.600);
+    transform: translate(-3px, -3px);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.600);
+    transition: transform .3s, border 0.3s;
+}
+
+/*SEÇÃO PARCEIROS*/
+
+#parceiros {
+    border-radius: 0px 0px 5px 5px;
+}
+#parceiros h3 {
+    color: #c9a26b;
+    font-size: 1.3em;
+}
+#parceiros #marcasPrincipais img {
+    width: 100px;
+    height: 30px;
+    display: inline-block;
+    padding: 2px;
+}
+
+#parceiros div#marcasPrincipais img:hover {
+    width: 105px;
+    height: 35px;
+    transition: .3s ease-in-out;
+}
+
+#parceiros #marcasSecundarias img {
+    width: 100px;
+    height: 30px;
+    display: inline-block;
+    padding: 2px;
+}
+
+#parceiros div#marcasSecundarias img:hover {
+    width: 105px;
+    height: 35px;
+    transition: .3s ease-in-out;
+}
+
+#parceiros #marcasTerciarias img {
+    width: 100px;
+    height: 30px;
+    display: inline-block;
+    padding: 2px;
+}
+
+#parceiros div#marcasTerciarias img:hover {
+    width: 105px;
+    height: 35px;
+    transition: .3s ease-in-out;
+}
+
+#parceiros div #logoRex {
+    height: 55px;
+}
+
+#parceiros div #logoRex:hover {
+    height: 60px !important;
+}
 
 /* Responsividade */
 @media(min-width: 768px) {
@@ -280,7 +429,7 @@ footer {
     bottom: 0;
     left: 0;
     width: 100%;
-    background-color: #fce410;
+    background-color: #c9a26b;
     text-align: center;
     padding: 10px 0;
     z-index: 9999;
@@ -291,3 +440,5 @@ footer > a, p {
     font-size: 0.7em;
     text-decoration: none;
 }
+
+
