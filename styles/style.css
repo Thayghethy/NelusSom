@@ -1,5 +1,15 @@
 @charset "UTF-8";
 
+@media print {
+    body{
+        display: none;
+    }
+    .print {
+        display: block !important;
+    }
+}
+
+
 @font-face {
     font-family: 'Nelus';
     src: url('fonts/Speeday-Bold-FFP.ttf') format('truetype'),
@@ -11,7 +21,7 @@
     padding: 0;
     box-sizing: border-box;
 }
-@media only screen and (min-width: 200px) and (max-width: 900px) {
+@media only screen and (min-width: 200px) and (max-width: 1000px) {
 .hidden {
     opacity: 0;
     transform: translateY(20px);
@@ -21,6 +31,10 @@
 .visible {
     opacity: 1;
     transform: translateY(0);
+}
+
+.print{
+    display: none;
 }
 
 body {
@@ -456,7 +470,7 @@ footer > a, p {
 
 
 /*AQUI COMEÇA O ESTILO PARA PC*/
-@media only screen and (min-width: 900px) {
+@media only screen and (min-width: 1024px) {
     /* Global Styles */
 
 * {
@@ -473,6 +487,10 @@ footer > a, p {
   }
   
   /* Header Styles */
+
+  .print{
+    display: none;
+  }
   
   header {
     position: relative;
@@ -783,3 +801,4 @@ footer > a, p {
     }
   }
 } 
+
