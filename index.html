@@ -11,7 +11,7 @@
     <h1 id="print" style="display: block;">Não é permitido imprimir este site</h1>
     <header>
         <div id="logomenu">
-            <img id="logo_menu" src="images/logo_menu.png" alt="logoNelusSom">
+            <img id="logo_menu" class="logo-container" src="images/logo_menu.png" alt="logoNelusSom" >
             <span id="close" class="material-symbols-outlined" onclick="clickMenu()">close</span>
             <span id="burger" class="material-symbols-outlined" onclick="clickMenu()">menu</span>
         </div>
@@ -171,6 +171,27 @@
 
         
         setInterval(autoSlide, 2500);
+        
+        //animação logo
+        const logoContainer = document.querySelector('#logomenu');
+        const logo = document.querySelector('#logo_menu');
+
+        logoContainer.addEventListener('mousemove', (event) => {
+        const { offsetWidth: width, offsetHeight: height } = logoContainer;
+        const { offsetX: x, offsetY: y } = event;
+
+    // Calcula a rotação com base na posição do mouse
+        const rotateX = ((y / height) - 1.5) * 25; // Ajusta o valor para rotacionar no eixo X
+        const rotateY = ((x / width) - 0.5) * -25; // Ajusta o valor para rotacionar no eixo Y
+
+        logo.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+    });
+
+    logoContainer.addEventListener('mouseleave', () => {
+        // Reseta a rotação quando o mouse sai do logo
+        logo.style.transform = 'rotateX(0deg) rotateY(0deg)';
+    });
+
     </script>
 </body>
 </html>
