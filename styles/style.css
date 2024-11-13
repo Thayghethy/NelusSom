@@ -261,7 +261,7 @@ header > menu > ul > li > a:hover {
     font-family: 'Nelus';
     font-size: 1em;
     letter-spacing: 1px;
-    text-align: center;
+    text-align: justify;
     margin-top: 10px;
     padding: 10px;
     line-height: 1.5;
@@ -295,6 +295,7 @@ header > menu > ul > li > a:hover {
 }
 
 #quemSomos p {
+    text-align: justify;
     font-size: 1.2em;
     color: #c9a26b;
     transform: scale(0.9);
@@ -649,6 +650,9 @@ footer > a, p {
   }
   
   section p {
+    font-weight: bolder;
+    text-align: justify;
+    line-height: 50px;
     color: #c9a26b;
     font-size: 1.8em;
   }
